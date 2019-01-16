@@ -15,6 +15,7 @@ Abstract base classes were used to declare and enforce the minimum required inte
 ----
 ## Development practices
 * UML.
+* PEP8 for naming, documenting and formatting conventions.
 * TDD.
 * SOLID principles.
 
