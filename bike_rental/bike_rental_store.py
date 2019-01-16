@@ -7,15 +7,15 @@ class BikeRentalStore:
     """Class that validates rental requests and registers clients with
     at least one rental.
     """
-    __promotion = None
-    __clients = None
+    _promotion = None
+    _clients = None
 
     def __init__(self, promotion):
         """ Set new BikeRentalStore attributes.
         :param promotion: Promotion
         """
-        self.__promotion = promotion
-        self.__clients = []
+        self._promotion = promotion
+        self._clients = []
 
     def handle_request(self, client, rentals):
         """Register the object that made the request and return the
@@ -25,5 +25,5 @@ class BikeRentalStore:
         :param rentals: tuple
         :return: float
         """
-        self.__clients.append(client)
-        return self.__promotion.apply_discount(rentals)
+        self._clients.append(client)
+        return self._promotion.apply_discount(rentals)

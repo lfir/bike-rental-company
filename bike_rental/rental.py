@@ -8,9 +8,9 @@ class Rental(ABC):
     """ABC that defines the minimum interface needed for concrete
     rental subclasses to collaborate with the rental system.
     """
-    __price = None
-    __start = None
-    __end = None
+    _price = None
+    _start = None
+    _end = None
 
     @staticmethod
     @abstractmethod

@@ -8,8 +8,8 @@ class Client(ABC):
     """ABC that defines the minimum interface needed for concrete
     clients to collaborate with the rental system.
     """
-    __rentals = None
-    __balance = None
+    _rentals = None
+    _balance = None
 
     @abstractmethod
     def request(self, rentals):

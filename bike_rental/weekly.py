@@ -12,15 +12,15 @@ class WeeklyRental(Rental):
     @property
     def price(self):
         """:return: int"""
-        return self.__price
+        return self._price
 
     def __init__(self, weeks):
         """Set attributes of a new WeeklyRental object.
         :param weeks: int
         """
-        self.__price = self.unit_price() * weeks
-        self.__start = datetime.now()
-        self.__end = self.__start + timedelta(weeks=weeks)
+        self._price = self.unit_price() * weeks
+        self._start = datetime.now()
+        self._end = self._start + timedelta(weeks=weeks)
 
     @staticmethod
     def unit_price():

@@ -12,15 +12,15 @@ class HourlyRental(Rental):
     @property
     def price(self):
         """:return: int"""
-        return self.__price
+        return self._price
 
     def __init__(self, hours):
         """Set attributes of a new HourlyRental object.
         :param hours: int
         """
-        self.__price = self.unit_price() * hours
-        self.__start = datetime.now()
-        self.__end = self.__start + timedelta(hours=hours)
+        self._price = self.unit_price() * hours
+        self._start = datetime.now()
+        self._end = self._start + timedelta(hours=hours)
 
     @staticmethod
     def unit_price():
