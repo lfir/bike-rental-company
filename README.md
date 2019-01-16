@@ -36,7 +36,25 @@ Abstract base classes were used to declare and enforce the minimum required inte
 
 4. Run tests with coverage report.
 
- PYTHONPATH=. pipenv run pytest --cov-report term-missing --cov=bike_rental/ tests/
+ pipenv run pytest --cov-report term-missing --cov=bike_rental/ tests/
 
 Output should look like this:
 ![alt text](https://i.postimg.cc/0y5ybptC/Screenshot-at-2019-01-15-21-35-44.png)
+
+### Alternative method if pipenv cannot be installed.
+1. After cloning the repository and changing to its directory run the following commands to create a virtual environment and install dependencies.
+
+ python3.7 -m venv br_virtenv
+ 
+ source br_virtenv/bin/activate
+ 
+ pip install pytest-cov
+
+2. Run tests with coverage report.
+
+ pytest --cov-report term-missing --cov=bike_rental/ tests
+ 
+3. Exit the virtual environment's shell.
+
+ deactivate
+ 
