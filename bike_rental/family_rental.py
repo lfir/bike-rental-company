@@ -19,7 +19,7 @@ class FamilyRental(Promotion):
 
     def apply_discount(self, rentals):
         """If the conditions for this promotion are met, apply a
-        30% discount to the total prince of the rentals.
+        30% discount to the total price of the rentals.
         Return the total.
         :param rentals: tuple with one or more Rental objects
         :return: float
