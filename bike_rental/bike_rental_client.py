@@ -12,8 +12,8 @@ class BikeRentalClient(Client):
 
     @property
     def rentals(self):
-        """Return a tuple of rentals made by this client.
-        :return: tuple
+        """Return a list of rentals made by this client.
+        :return: list
         """
         return self._rentals
 
